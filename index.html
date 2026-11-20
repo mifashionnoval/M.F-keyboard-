@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101525">
+  <title>KeyGlow Keyboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">YOUR PERSONAL KEYBOARD</p>
+        <h1>KeyGlow <span>⌨</span></h1>
+      </div>
+      <div class="status" id="connectionStatus">● Checking…</div>
+    </header>
+
+    <section class="panel">
+      <label for="typingBox">Try your keyboard</label>
+      <textarea id="typingBox" placeholder="Tap the keys below and start typing…" spellcheck="false"></textarea>
+      <div class="edit-actions">
+        <button id="copyBtn" class="small-btn">Copy text</button>
+        <button id="clearBtn" class="small-btn">Clear</button>
+      </div>
+    </section>
+
+    <section class="settings">
+      <div class="setting">
+        <label for="themeSelect">Keyboard theme</label>
+        <select id="themeSelect">
+          <option value="midnight">Midnight blue</option>
+          <option value="ocean">Ocean</option>
+          <option value="purple">Purple glow</option>
+          <option value="forest">Forest</option>
+          <option value="light">Light</option>
+        </select>
+      </div>
+      <div class="toggles">
+        <label class="toggle"><input type="checkbox" id="soundToggle"> Key sound</label>
+        <label class="toggle"><input type="checkbox" id="vibrationToggle"> Vibration</label>
+      </div>
+    </section>
+
+    <section class="keyboard" aria-label="On-screen keyboard">
+      <div class="toolbar">
+        <button data-action="emoji" aria-label="Emoji">😊</button>
+        <button data-action="stickers" aria-label="Stickers">🎭</button>
+        <button data-action="numbers">123</button>
+        <button data-action="symbols">#+=</button>
+        <button data-action="letters">ABC</button>
+        <button data-action="backspace" aria-label="Backspace">⌫</button>
+      </div>
+      <div id="stickerPanel" class="sticker-panel" hidden>
+        <div class="sticker-heading">
+          <span>🇳🇬 Naija funny stickers</span>
+          <span class="sticker-hint">Tap a sticker to use it</span>
+        </div>
+        <div id="stickerGrid" class="sticker-grid"></div>
+      </div>
+      <div id="keyRows"></div>
+      <div id="stickerTray" class="sticker-tray" hidden aria-label="Nigerian meme stickers"></div>
+      <div class="bottom-row">
+        <button class="special" data-action="shift" aria-label="Shift">⇧</button>
+        <button class="special" data-action="comma">,</button>
+        <button class="space" data-action="space">English (US)</button>
+        <button class="special" data-action="period">.</button>
+        <button class="enter" data-action="enter">↵</button>
+      </div>
+    </section>
+    <footer>KeyGlow · Works offline · No account required</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
